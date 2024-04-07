@@ -1,0 +1,66 @@
+<h2 class="bg-primary p-4">ANgular components</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-product2></app-product2>
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let skill of skills">l love {{skill}} </li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+
+<table class="table table-border">
+  <thead>
+    <tr>
+      <th>sr.no</th>
+      <th>fname</th>
+      <th>lname</th>
+      <th>email</th>
+      <th>contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of stdArr; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{std.fname}}</td>
+      <td>{{std.lname}}</td>
+      <td>{{std.email}}</td>
+      <td>{{std.contact}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>new table</h2>
+
+      <table class="table table-bordered">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th>sr.no</th>
+            <th> first Name</th>
+            <th>last Name</th>
+            <th> class</th>
+          </tr>
+        </thead>
+        <tbody class="bg-secondary">
+          <tr ngFor="let std2 of stdArr2;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{std2.fname}}</td>
+            <td>{{std2.lname}}</td>
+            <td>{{std2.class}}</td>
+           
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<input type="text" [value]="username" class="form-control">
